@@ -15,20 +15,32 @@ class Welcome extends Component {
     if (status === true) {
       this.state.status = false
       this.state.texts = 'subscribed'
-
       this.setState(preState => preState)
+      //   this.setState(preState => {  //useless statements untill commnet ends
+      //     console.log(preState)
+      //     this.preState.status = false
+      //     this.preState.texts = 'subscribed'
+      //     return preState
+      //   })
     } else {
       this.state.status = true
       this.state.texts = 'subscribe'
       this.setState(preState => preState)
+      //   this.setState(preState => {   //useless statements untill commnet ends
+      //     // preState.status = true
+      //     // preState.texts = 'subscribe'
+      //     console.log('else blockś')
+
+      //     // return preState
+      //   })
     }
   }
 
   render() {
     const {texts} = this.state
     return (
-      <div>
-        <h1>Welcome</h1>
+      <div className="bg-container">
+        <h1 className="heading">Welcome</h1>
         <p>Thank you!Happy Learning</p>
         <button type="button" onClick={this.onSub}>
           {texts}
