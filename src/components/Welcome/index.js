@@ -10,7 +10,7 @@ class Welcome extends Component {
   onSub = () => {
     const {status, texts} = this.state
     console.log(status)
-    //console.log(texts)
+    console.log(texts)
 
     if (status === true) {
       this.state.status = false
